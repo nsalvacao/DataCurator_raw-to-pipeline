@@ -1,0 +1,564 @@
+[
+  {
+    "query_id": "query_001",
+    "query_name": "Simple Technical Issues",
+    "input": "# Development Notes - Week 1\n\n- Login button unresponsive on mobile Safari\n- Database query timeout on /reports endpoint (P95 > 5s)\n- Missing error handling in payment webhook processor\n- CSS styling broken in IE 11 (deprecated but still supported)\n- Unit test coverage below 50% in auth module",
+    "output": {
+      "taxonomy": {
+        "primary": [
+          "Frontend",
+          "Backend",
+          "DevOps",
+          "Testing"
+        ],
+        "secondary": [
+          "Mobile Development",
+          "Performance",
+          "Error Handling",
+          "Browser Compatibility"
+        ],
+        "impact_score": 0.78
+      },
+      "categories": [
+        "Mobile Bug",
+        "API Performance",
+        "Code Quality",
+        "Browser Support"
+      ],
+      "priority_areas": [
+        "Mobile Development",
+        "Performance",
+        "Error Handling"
+      ],
+      "index_entries": [
+        {
+          "category": "Mobile Bug",
+          "relevance": 0.8
+        },
+        {
+          "category": "API Performance",
+          "relevance": 0.8
+        },
+        {
+          "category": "Code Quality",
+          "relevance": 0.8
+        }
+      ],
+      "audit_notes": "Mock response for testing - generated automatically"
+    },
+    "status": "success",
+    "execution_time": 5.2,
+    "timestamp": "2026-01-15T21:00:35.990574",
+    "metadata": {
+      "source": "mock_generator",
+      "categories_count": 4,
+      "primary_count": 4,
+      "secondary_count": 4
+    }
+  },
+  {
+    "query_id": "query_002",
+    "query_name": "Complex Multi-Dimensional Problems",
+    "input": "# Technical Debt Assessment\n\n## Backend Issues\n- API rate limiting not enforced, causing DDoS vulnerability\n- Legacy monolithic auth service blocks microservices migration\n- No API versioning strategy, breaking changes cause production incidents\n- Database replication lag > 30s in EU region\n- Cache invalidation strategy causing stale data issues\n\n## Frontend Issues\n- Bundle size > 2MB, causing slow load times on 3G networks\n- No lazy loading on image galleries, memory leaks on mobile\n- JavaScript errors not tracked in production\n- Dark mode CSS conflicts with accessibility standards\n\n## DevOps Issues\n- Manual deployment process error-prone\n- No automated rollback strategy\n- Logs not aggregated, debugging production issues difficult\n- No monitoring alerts for critical endpoints",
+    "output": {
+      "taxonomy": {
+        "primary": [
+          "Architecture",
+          "Security",
+          "Infrastructure",
+          "Frontend",
+          "Backend"
+        ],
+        "secondary": [
+          "API Design",
+          "Caching",
+          "Monitoring",
+          "Accessibility",
+          "Performance Optimization"
+        ],
+        "impact_score": 0.92
+      },
+      "categories": [
+        "Debt Remediation",
+        "Architecture Refactoring",
+        "Performance Optimization",
+        "DevOps Improvement"
+      ],
+      "priority_areas": [
+        "API Design",
+        "Caching",
+        "Monitoring"
+      ],
+      "index_entries": [
+        {
+          "category": "Debt Remediation",
+          "relevance": 0.8
+        },
+        {
+          "category": "Architecture Refactoring",
+          "relevance": 0.8
+        },
+        {
+          "category": "Performance Optimization",
+          "relevance": 0.8
+        }
+      ],
+      "audit_notes": "Mock response for testing - generated automatically"
+    },
+    "status": "success",
+    "execution_time": 5.2,
+    "timestamp": "2026-01-15T21:00:35.990574",
+    "metadata": {
+      "source": "mock_generator",
+      "categories_count": 4,
+      "primary_count": 5,
+      "secondary_count": 5
+    }
+  },
+  {
+    "query_id": "query_003",
+    "query_name": "Feature Requests with Dependencies",
+    "input": "# Feature Backlog - Q2 2026\n\n- Export reports to PDF (blocked by: report generation service)\n- Real-time notifications (blocked by: WebSocket infrastructure)\n- Role-based access control v2 (blocked by: database migration, auth refactor)\n- Multi-language support (blocked by: i18n framework adoption, design system update)\n- Two-factor authentication (depends on: secure token storage, email delivery service)\n- Advanced search with filters (requires: Elasticsearch integration, schema changes)",
+    "output": {
+      "taxonomy": {
+        "primary": [
+          "Features",
+          "Backend",
+          "Frontend",
+          "Infrastructure"
+        ],
+        "secondary": [
+          "File Handling",
+          "Real-time Communication",
+          "Authentication",
+          "Internationalization",
+          "Search"
+        ],
+        "impact_score": 0.85
+      },
+      "categories": [
+        "Feature Development",
+        "Dependency Management",
+        "Integration Planning"
+      ],
+      "priority_areas": [
+        "File Handling",
+        "Real-time Communication",
+        "Authentication"
+      ],
+      "index_entries": [
+        {
+          "category": "Feature Development",
+          "relevance": 0.8
+        },
+        {
+          "category": "Dependency Management",
+          "relevance": 0.8
+        },
+        {
+          "category": "Integration Planning",
+          "relevance": 0.8
+        }
+      ],
+      "audit_notes": "Mock response for testing - generated automatically"
+    },
+    "status": "success",
+    "execution_time": 5.2,
+    "timestamp": "2026-01-15T21:00:35.990574",
+    "metadata": {
+      "source": "mock_generator",
+      "categories_count": 3,
+      "primary_count": 4,
+      "secondary_count": 5
+    }
+  },
+  {
+    "query_id": "query_004",
+    "query_name": "Production Incidents & Hotfixes",
+    "input": "# Critical Issues - Immediate Action Required\n\n## Severity: CRITICAL\n- Payment processing failing for Stripe customers (revenue impact: $10K/day)\n- User sessions randomly expire (affecting ~20% of active users)\n- Database disk space at 95%, potential data loss\n\n## Severity: HIGH\n- Email notifications delayed by 2-4 hours (customer complaints increasing)\n- Search feature returns incorrect results for special characters\n- Memory leaks in background job processor, causing daily restarts\n- File upload limit enforcement broken, disk space exhaustion risk",
+    "output": {
+      "taxonomy": {
+        "primary": [
+          "Critical",
+          "Security",
+          "Performance",
+          "Data Integrity"
+        ],
+        "secondary": [
+          "Payment Systems",
+          "Session Management",
+          "Storage Management",
+          "Email Delivery"
+        ],
+        "impact_score": 0.99
+      },
+      "categories": [
+        "Critical Incident",
+        "Revenue Impact",
+        "Data Risk",
+        "System Reliability"
+      ],
+      "priority_areas": [
+        "Payment Systems",
+        "Session Management",
+        "Storage Management"
+      ],
+      "index_entries": [
+        {
+          "category": "Critical Incident",
+          "relevance": 0.8
+        },
+        {
+          "category": "Revenue Impact",
+          "relevance": 0.8
+        },
+        {
+          "category": "Data Risk",
+          "relevance": 0.8
+        }
+      ],
+      "audit_notes": "Mock response for testing - generated automatically"
+    },
+    "status": "success",
+    "execution_time": 5.2,
+    "timestamp": "2026-01-15T21:00:35.990574",
+    "metadata": {
+      "source": "mock_generator",
+      "categories_count": 4,
+      "primary_count": 4,
+      "secondary_count": 4
+    }
+  },
+  {
+    "query_id": "query_005",
+    "query_name": "Performance Optimization Opportunities",
+    "input": "# Performance Analysis Report\n\n- Homepage load time: 4.2s (target: <2s) - 85% of time spent on 3rd party ads\n- Search query response: 1800ms (target: <500ms) - unindexed database queries\n- Mobile app cold start: 8.5s (target: <3s) - heavy dependencies in main thread\n- API P99 latency: 8.2s (target: <2s) - resource exhaustion during peak hours\n- Database query slow log: 450 queries/day >1s - N+1 queries in ORM\n- Memory usage per instance: 1.8GB (target: <800MB) - memory leaks + large data structures",
+    "output": {
+      "taxonomy": {
+        "primary": [
+          "Backend",
+          "Performance",
+          "Scalability"
+        ],
+        "secondary": [
+          "Load Balancing",
+          "Database Optimization",
+          "Caching",
+          "Network Latency"
+        ],
+        "impact_score": 0.88
+      },
+      "categories": [
+        "Scalability Issue",
+        "Resource Constraint",
+        "Geographic Distribution"
+      ],
+      "priority_areas": [
+        "Load Balancing",
+        "Database Optimization",
+        "Caching"
+      ],
+      "index_entries": [
+        {
+          "category": "Scalability Issue",
+          "relevance": 0.8
+        },
+        {
+          "category": "Resource Constraint",
+          "relevance": 0.8
+        },
+        {
+          "category": "Geographic Distribution",
+          "relevance": 0.8
+        }
+      ],
+      "audit_notes": "Mock response for testing - generated automatically"
+    },
+    "status": "success",
+    "execution_time": 5.2,
+    "timestamp": "2026-01-15T21:00:35.990574",
+    "metadata": {
+      "source": "mock_generator",
+      "categories_count": 3,
+      "primary_count": 3,
+      "secondary_count": 4
+    }
+  },
+  {
+    "query_id": "query_006",
+    "query_name": "Security & Compliance Issues",
+    "input": "# Security Audit Findings\n\n## Critical\n- SQL injection vulnerability in search parameter\n- Hardcoded API credentials in git history\n- CORS misconfigured, allowing unauthorized domains\n- Password reset tokens not expiring\n\n## High\n- GDPR compliance: no data deletion on user removal\n- PCI-DSS: credit card data stored in logs\n- Missing rate limiting on login endpoint (brute force risk)\n- Session fixation vulnerability in OAuth flow\n\n## Medium\n- Outdated dependencies with known CVEs\n- No Content Security Policy headers\n- Sensitive user data in error messages\n- Unencrypted internal API communications",
+    "output": {
+      "taxonomy": {
+        "primary": [
+          "Security",
+          "DevOps",
+          "Backend"
+        ],
+        "secondary": [
+          "Encryption",
+          "Access Control",
+          "Vulnerability Assessment",
+          "Incident Response"
+        ],
+        "impact_score": 0.95
+      },
+      "categories": [
+        "Threat Assessment",
+        "Vulnerability",
+        "Security Hardening",
+        "Compliance"
+      ],
+      "priority_areas": [
+        "Encryption",
+        "Access Control",
+        "Vulnerability Assessment"
+      ],
+      "index_entries": [
+        {
+          "category": "Threat Assessment",
+          "relevance": 0.8
+        },
+        {
+          "category": "Vulnerability",
+          "relevance": 0.8
+        },
+        {
+          "category": "Security Hardening",
+          "relevance": 0.8
+        }
+      ],
+      "audit_notes": "Mock response for testing - generated automatically"
+    },
+    "status": "success",
+    "execution_time": 5.2,
+    "timestamp": "2026-01-15T21:00:35.990574",
+    "metadata": {
+      "source": "mock_generator",
+      "categories_count": 4,
+      "primary_count": 3,
+      "secondary_count": 4
+    }
+  },
+  {
+    "query_id": "query_007",
+    "query_name": "Infrastructure & DevOps Challenges",
+    "input": "# Infrastructure Assessment\n\n- Kubernetes cluster at 85% capacity, scaling issues under load\n- No disaster recovery plan, RTO/RPO undefined\n- Database backups not tested (restore procedures untested)\n- Load balancer not handling connection drains gracefully\n- No chaos engineering tests, resilience unknown\n- Cross-region failover takes 30+ minutes\n- Container images not scanned for vulnerabilities\n- No resource quotas, one noisy neighbor can crash cluster",
+    "output": {
+      "taxonomy": {
+        "primary": [
+          "Infrastructure",
+          "DevOps",
+          "Backend"
+        ],
+        "secondary": [
+          "Containerization",
+          "Orchestration",
+          "Configuration Management",
+          "CI/CD"
+        ],
+        "impact_score": 0.82
+      },
+      "categories": [
+        "Infrastructure Modernization",
+        "Deployment Automation",
+        "Container Orchestration"
+      ],
+      "priority_areas": [
+        "Containerization",
+        "Orchestration",
+        "Configuration Management"
+      ],
+      "index_entries": [
+        {
+          "category": "Infrastructure Modernization",
+          "relevance": 0.8
+        },
+        {
+          "category": "Deployment Automation",
+          "relevance": 0.8
+        },
+        {
+          "category": "Container Orchestration",
+          "relevance": 0.8
+        }
+      ],
+      "audit_notes": "Mock response for testing - generated automatically"
+    },
+    "status": "success",
+    "execution_time": 5.2,
+    "timestamp": "2026-01-15T21:00:35.990574",
+    "metadata": {
+      "source": "mock_generator",
+      "categories_count": 3,
+      "primary_count": 3,
+      "secondary_count": 4
+    }
+  },
+  {
+    "query_id": "query_008",
+    "query_name": "Team & Process Issues",
+    "input": "# Team Retrospective Notes\n\n- Code review turnaround time: 3-4 days, blocking feature delivery\n- No standardized testing strategy, test quality inconsistent\n- Documentation outdated, onboarding new devs takes 4 weeks\n- Deploys happen manually, no CI/CD pipeline\n- Post-mortems conducted but no follow-up tracking\n- Knowledge silos: only 1-2 people understand payment system\n- No SLO/SLA definitions for critical services\n- Tech debt backlog ignored, feature velocity decreasing",
+    "output": {
+      "taxonomy": {
+        "primary": [
+          "Frontend",
+          "Backend",
+          "Organization"
+        ],
+        "secondary": [
+          "Team Communication",
+          "Code Review",
+          "Documentation",
+          "Knowledge Sharing"
+        ],
+        "impact_score": 0.72
+      },
+      "categories": [
+        "Team Coordination",
+        "Process Improvement",
+        "Documentation Need"
+      ],
+      "priority_areas": [
+        "Team Communication",
+        "Code Review",
+        "Documentation"
+      ],
+      "index_entries": [
+        {
+          "category": "Team Coordination",
+          "relevance": 0.8
+        },
+        {
+          "category": "Process Improvement",
+          "relevance": 0.8
+        },
+        {
+          "category": "Documentation Need",
+          "relevance": 0.8
+        }
+      ],
+      "audit_notes": "Mock response for testing - generated automatically"
+    },
+    "status": "success",
+    "execution_time": 5.2,
+    "timestamp": "2026-01-15T21:00:35.990574",
+    "metadata": {
+      "source": "mock_generator",
+      "categories_count": 3,
+      "primary_count": 3,
+      "secondary_count": 4
+    }
+  },
+  {
+    "query_id": "query_009",
+    "query_name": "Data & Analytics Issues",
+    "input": "# Data Quality & Analytics Problems\n\n- Event tracking inconsistent, analytics dashboards show conflicting numbers\n- User session data retention unclear, GDPR compliance uncertain\n- Funnel analysis broken, conversion rates not tracked correctly\n- A/B test framework has false positive rate (35% of tests invalid)\n- Data warehouse replication lag 6+ hours\n- ML model predictions diverging from actual user behavior\n- No audit trail for data access, compliance gaps\n- Real-time analytics unavailable, decision-making delayed",
+    "output": {
+      "taxonomy": {
+        "primary": [
+          "Backend",
+          "Data",
+          "Analytics"
+        ],
+        "secondary": [
+          "Data Processing",
+          "Reporting",
+          "Query Optimization",
+          "Visualization"
+        ],
+        "impact_score": 0.8
+      },
+      "categories": [
+        "Data Pipeline",
+        "Analytics Enhancement",
+        "Reporting Capability"
+      ],
+      "priority_areas": [
+        "Data Processing",
+        "Reporting",
+        "Query Optimization"
+      ],
+      "index_entries": [
+        {
+          "category": "Data Pipeline",
+          "relevance": 0.8
+        },
+        {
+          "category": "Analytics Enhancement",
+          "relevance": 0.8
+        },
+        {
+          "category": "Reporting Capability",
+          "relevance": 0.8
+        }
+      ],
+      "audit_notes": "Mock response for testing - generated automatically"
+    },
+    "status": "success",
+    "execution_time": 5.2,
+    "timestamp": "2026-01-15T21:00:35.990574",
+    "metadata": {
+      "source": "mock_generator",
+      "categories_count": 3,
+      "primary_count": 3,
+      "secondary_count": 4
+    }
+  },
+  {
+    "query_id": "query_010",
+    "query_name": "Enterprise & Integration Issues",
+    "input": "# Enterprise Customer Requirements\n\n- SSO integration (SAML/OAuth) needed for compliance\n- Multi-tenancy not supported, blocking enterprise contracts\n- Audit logging insufficient for compliance audits\n- SLA requirements: 99.9% uptime, 1hr response for critical issues\n- API rate limits too strict for large-scale integrations\n- Webhook delivery not reliable (missing retry logic, no dead letter queue)\n- Data residency requirements (EU data must stay in EU)\n- Custom fields schema not flexible enough for customer needs",
+    "output": {
+      "taxonomy": {
+        "primary": [
+          "Architecture",
+          "Backend",
+          "Security",
+          "Scalability"
+        ],
+        "secondary": [
+          "Enterprise Integration",
+          "Compliance",
+          "Multi-tenancy",
+          "High Availability"
+        ],
+        "impact_score": 0.9
+      },
+      "categories": [
+        "Enterprise Architecture",
+        "System Design",
+        "Regulatory Compliance"
+      ],
+      "priority_areas": [
+        "Enterprise Integration",
+        "Compliance",
+        "Multi-tenancy"
+      ],
+      "index_entries": [
+        {
+          "category": "Enterprise Architecture",
+          "relevance": 0.8
+        },
+        {
+          "category": "System Design",
+          "relevance": 0.8
+        },
+        {
+          "category": "Regulatory Compliance",
+          "relevance": 0.8
+        }
+      ],
+      "audit_notes": "Mock response for testing - generated automatically"
+    },
+    "status": "success",
+    "execution_time": 5.2,
+    "timestamp": "2026-01-15T21:00:35.990574",
+    "metadata": {
+      "source": "mock_generator",
+      "categories_count": 3,
+      "primary_count": 4,
+      "secondary_count": 4
+    }
+  }
+]

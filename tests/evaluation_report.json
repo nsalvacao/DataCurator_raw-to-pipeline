@@ -1,0 +1,517 @@
+{
+  "timestamp": "2026-01-15T21:01:20.775181",
+  "evaluation_summary": {
+    "total_queries": 10,
+    "agent_runs_successful": 10,
+    "agent_runs_failed": 0,
+    "total_responses_evaluated": 10
+  },
+  "metrics_summary": {
+    "overall_average_score": 0.4166666666666667,
+    "passed": 0,
+    "failed": 10,
+    "pass_rate": 0.0
+  },
+  "detailed_results": [
+    {
+      "query_id": "query_001",
+      "metrics": {
+        "output_correctness": {
+          "metric": "output_correctness",
+          "score": 0.10000000000000002,
+          "passed": false,
+          "issues": [
+            "Missing classifier output",
+            "Missing taxonomy_raw output",
+            "Missing taxonomy_refined output",
+            "Missing index_architect (roadmap) output",
+            "Missing auditor report",
+            "Missing roadmap section: Executive Dashboard",
+            "Missing roadmap section: Program Overview",
+            "Missing roadmap section: Category Portfolio",
+            "Missing roadmap section: Critical Path",
+            "Missing roadmap section: Risk"
+          ],
+          "issue_count": 10
+        },
+        "content_quality": {
+          "metric": "content_quality",
+          "score": 0.65,
+          "passed": false,
+          "issues": [
+            "Output length inadequate compared to input",
+            "Missing detailed solution recommendations",
+            "Roadmap lacks actionability"
+          ],
+          "issue_count": 3,
+          "output_length": 0,
+          "input_length": 294
+        },
+        "completeness": {
+          "metric": "completeness",
+          "score": 0.5,
+          "passed": false,
+          "issues": [
+            "No categories generated from input",
+            "No taxonomy generated from problems"
+          ],
+          "issue_count": 2,
+          "input_problem_count": 6,
+          "categories_generated": 0
+        }
+      },
+      "overall_score": 0.4166666666666667,
+      "all_passed": false
+    },
+    {
+      "query_id": "query_002",
+      "metrics": {
+        "output_correctness": {
+          "metric": "output_correctness",
+          "score": 0.10000000000000002,
+          "passed": false,
+          "issues": [
+            "Missing classifier output",
+            "Missing taxonomy_raw output",
+            "Missing taxonomy_refined output",
+            "Missing index_architect (roadmap) output",
+            "Missing auditor report",
+            "Missing roadmap section: Executive Dashboard",
+            "Missing roadmap section: Program Overview",
+            "Missing roadmap section: Category Portfolio",
+            "Missing roadmap section: Critical Path",
+            "Missing roadmap section: Risk"
+          ],
+          "issue_count": 10
+        },
+        "content_quality": {
+          "metric": "content_quality",
+          "score": 0.65,
+          "passed": false,
+          "issues": [
+            "Output length inadequate compared to input",
+            "Missing detailed solution recommendations",
+            "Roadmap lacks actionability"
+          ],
+          "issue_count": 3,
+          "output_length": 0,
+          "input_length": 787
+        },
+        "completeness": {
+          "metric": "completeness",
+          "score": 0.5,
+          "passed": false,
+          "issues": [
+            "No categories generated from input",
+            "No taxonomy generated from problems"
+          ],
+          "issue_count": 2,
+          "input_problem_count": 16,
+          "categories_generated": 0
+        }
+      },
+      "overall_score": 0.4166666666666667,
+      "all_passed": false
+    },
+    {
+      "query_id": "query_003",
+      "metrics": {
+        "output_correctness": {
+          "metric": "output_correctness",
+          "score": 0.10000000000000002,
+          "passed": false,
+          "issues": [
+            "Missing classifier output",
+            "Missing taxonomy_raw output",
+            "Missing taxonomy_refined output",
+            "Missing index_architect (roadmap) output",
+            "Missing auditor report",
+            "Missing roadmap section: Executive Dashboard",
+            "Missing roadmap section: Program Overview",
+            "Missing roadmap section: Category Portfolio",
+            "Missing roadmap section: Critical Path",
+            "Missing roadmap section: Risk"
+          ],
+          "issue_count": 10
+        },
+        "content_quality": {
+          "metric": "content_quality",
+          "score": 0.65,
+          "passed": false,
+          "issues": [
+            "Output length inadequate compared to input",
+            "Missing detailed solution recommendations",
+            "Roadmap lacks actionability"
+          ],
+          "issue_count": 3,
+          "output_length": 0,
+          "input_length": 493
+        },
+        "completeness": {
+          "metric": "completeness",
+          "score": 0.5,
+          "passed": false,
+          "issues": [
+            "No categories generated from input",
+            "No taxonomy generated from problems"
+          ],
+          "issue_count": 2,
+          "input_problem_count": 7,
+          "categories_generated": 0
+        }
+      },
+      "overall_score": 0.4166666666666667,
+      "all_passed": false
+    },
+    {
+      "query_id": "query_004",
+      "metrics": {
+        "output_correctness": {
+          "metric": "output_correctness",
+          "score": 0.10000000000000002,
+          "passed": false,
+          "issues": [
+            "Missing classifier output",
+            "Missing taxonomy_raw output",
+            "Missing taxonomy_refined output",
+            "Missing index_architect (roadmap) output",
+            "Missing auditor report",
+            "Missing roadmap section: Executive Dashboard",
+            "Missing roadmap section: Program Overview",
+            "Missing roadmap section: Category Portfolio",
+            "Missing roadmap section: Critical Path",
+            "Missing roadmap section: Risk"
+          ],
+          "issue_count": 10
+        },
+        "content_quality": {
+          "metric": "content_quality",
+          "score": 0.65,
+          "passed": false,
+          "issues": [
+            "Output length inadequate compared to input",
+            "Missing detailed solution recommendations",
+            "Roadmap lacks actionability"
+          ],
+          "issue_count": 3,
+          "output_length": 0,
+          "input_length": 555
+        },
+        "completeness": {
+          "metric": "completeness",
+          "score": 0.5,
+          "passed": false,
+          "issues": [
+            "No categories generated from input",
+            "No taxonomy generated from problems"
+          ],
+          "issue_count": 2,
+          "input_problem_count": 10,
+          "categories_generated": 0
+        }
+      },
+      "overall_score": 0.4166666666666667,
+      "all_passed": false
+    },
+    {
+      "query_id": "query_005",
+      "metrics": {
+        "output_correctness": {
+          "metric": "output_correctness",
+          "score": 0.10000000000000002,
+          "passed": false,
+          "issues": [
+            "Missing classifier output",
+            "Missing taxonomy_raw output",
+            "Missing taxonomy_refined output",
+            "Missing index_architect (roadmap) output",
+            "Missing auditor report",
+            "Missing roadmap section: Executive Dashboard",
+            "Missing roadmap section: Program Overview",
+            "Missing roadmap section: Category Portfolio",
+            "Missing roadmap section: Critical Path",
+            "Missing roadmap section: Risk"
+          ],
+          "issue_count": 10
+        },
+        "content_quality": {
+          "metric": "content_quality",
+          "score": 0.65,
+          "passed": false,
+          "issues": [
+            "Output length inadequate compared to input",
+            "Missing detailed solution recommendations",
+            "Roadmap lacks actionability"
+          ],
+          "issue_count": 3,
+          "output_length": 0,
+          "input_length": 503
+        },
+        "completeness": {
+          "metric": "completeness",
+          "score": 0.5,
+          "passed": false,
+          "issues": [
+            "No categories generated from input",
+            "No taxonomy generated from problems"
+          ],
+          "issue_count": 2,
+          "input_problem_count": 6,
+          "categories_generated": 0
+        }
+      },
+      "overall_score": 0.4166666666666667,
+      "all_passed": false
+    },
+    {
+      "query_id": "query_006",
+      "metrics": {
+        "output_correctness": {
+          "metric": "output_correctness",
+          "score": 0.10000000000000002,
+          "passed": false,
+          "issues": [
+            "Missing classifier output",
+            "Missing taxonomy_raw output",
+            "Missing taxonomy_refined output",
+            "Missing index_architect (roadmap) output",
+            "Missing auditor report",
+            "Missing roadmap section: Executive Dashboard",
+            "Missing roadmap section: Program Overview",
+            "Missing roadmap section: Category Portfolio",
+            "Missing roadmap section: Critical Path",
+            "Missing roadmap section: Risk"
+          ],
+          "issue_count": 10
+        },
+        "content_quality": {
+          "metric": "content_quality",
+          "score": 0.65,
+          "passed": false,
+          "issues": [
+            "Output length inadequate compared to input",
+            "Missing detailed solution recommendations",
+            "Roadmap lacks actionability"
+          ],
+          "issue_count": 3,
+          "output_length": 0,
+          "input_length": 602
+        },
+        "completeness": {
+          "metric": "completeness",
+          "score": 0.5,
+          "passed": false,
+          "issues": [
+            "No categories generated from input",
+            "No taxonomy generated from problems"
+          ],
+          "issue_count": 2,
+          "input_problem_count": 15,
+          "categories_generated": 0
+        }
+      },
+      "overall_score": 0.4166666666666667,
+      "all_passed": false
+    },
+    {
+      "query_id": "query_007",
+      "metrics": {
+        "output_correctness": {
+          "metric": "output_correctness",
+          "score": 0.10000000000000002,
+          "passed": false,
+          "issues": [
+            "Missing classifier output",
+            "Missing taxonomy_raw output",
+            "Missing taxonomy_refined output",
+            "Missing index_architect (roadmap) output",
+            "Missing auditor report",
+            "Missing roadmap section: Executive Dashboard",
+            "Missing roadmap section: Program Overview",
+            "Missing roadmap section: Category Portfolio",
+            "Missing roadmap section: Critical Path",
+            "Missing roadmap section: Risk"
+          ],
+          "issue_count": 10
+        },
+        "content_quality": {
+          "metric": "content_quality",
+          "score": 0.65,
+          "passed": false,
+          "issues": [
+            "Output length inadequate compared to input",
+            "Missing detailed solution recommendations",
+            "Roadmap lacks actionability"
+          ],
+          "issue_count": 3,
+          "output_length": 0,
+          "input_length": 458
+        },
+        "completeness": {
+          "metric": "completeness",
+          "score": 0.5,
+          "passed": false,
+          "issues": [
+            "No categories generated from input",
+            "No taxonomy generated from problems"
+          ],
+          "issue_count": 2,
+          "input_problem_count": 8,
+          "categories_generated": 0
+        }
+      },
+      "overall_score": 0.4166666666666667,
+      "all_passed": false
+    },
+    {
+      "query_id": "query_008",
+      "metrics": {
+        "output_correctness": {
+          "metric": "output_correctness",
+          "score": 0.10000000000000002,
+          "passed": false,
+          "issues": [
+            "Missing classifier output",
+            "Missing taxonomy_raw output",
+            "Missing taxonomy_refined output",
+            "Missing index_architect (roadmap) output",
+            "Missing auditor report",
+            "Missing roadmap section: Executive Dashboard",
+            "Missing roadmap section: Program Overview",
+            "Missing roadmap section: Category Portfolio",
+            "Missing roadmap section: Critical Path",
+            "Missing roadmap section: Risk"
+          ],
+          "issue_count": 10
+        },
+        "content_quality": {
+          "metric": "content_quality",
+          "score": 0.65,
+          "passed": false,
+          "issues": [
+            "Output length inadequate compared to input",
+            "Missing detailed solution recommendations",
+            "Roadmap lacks actionability"
+          ],
+          "issue_count": 3,
+          "output_length": 0,
+          "input_length": 477
+        },
+        "completeness": {
+          "metric": "completeness",
+          "score": 0.5,
+          "passed": false,
+          "issues": [
+            "No categories generated from input",
+            "No taxonomy generated from problems"
+          ],
+          "issue_count": 2,
+          "input_problem_count": 8,
+          "categories_generated": 0
+        }
+      },
+      "overall_score": 0.4166666666666667,
+      "all_passed": false
+    },
+    {
+      "query_id": "query_009",
+      "metrics": {
+        "output_correctness": {
+          "metric": "output_correctness",
+          "score": 0.10000000000000002,
+          "passed": false,
+          "issues": [
+            "Missing classifier output",
+            "Missing taxonomy_raw output",
+            "Missing taxonomy_refined output",
+            "Missing index_architect (roadmap) output",
+            "Missing auditor report",
+            "Missing roadmap section: Executive Dashboard",
+            "Missing roadmap section: Program Overview",
+            "Missing roadmap section: Category Portfolio",
+            "Missing roadmap section: Critical Path",
+            "Missing roadmap section: Risk"
+          ],
+          "issue_count": 10
+        },
+        "content_quality": {
+          "metric": "content_quality",
+          "score": 0.65,
+          "passed": false,
+          "issues": [
+            "Output length inadequate compared to input",
+            "Missing detailed solution recommendations",
+            "Roadmap lacks actionability"
+          ],
+          "issue_count": 3,
+          "output_length": 0,
+          "input_length": 521
+        },
+        "completeness": {
+          "metric": "completeness",
+          "score": 0.5,
+          "passed": false,
+          "issues": [
+            "No categories generated from input",
+            "No taxonomy generated from problems"
+          ],
+          "issue_count": 2,
+          "input_problem_count": 9,
+          "categories_generated": 0
+        }
+      },
+      "overall_score": 0.4166666666666667,
+      "all_passed": false
+    },
+    {
+      "query_id": "query_010",
+      "metrics": {
+        "output_correctness": {
+          "metric": "output_correctness",
+          "score": 0.10000000000000002,
+          "passed": false,
+          "issues": [
+            "Missing classifier output",
+            "Missing taxonomy_raw output",
+            "Missing taxonomy_refined output",
+            "Missing index_architect (roadmap) output",
+            "Missing auditor report",
+            "Missing roadmap section: Executive Dashboard",
+            "Missing roadmap section: Program Overview",
+            "Missing roadmap section: Category Portfolio",
+            "Missing roadmap section: Critical Path",
+            "Missing roadmap section: Risk"
+          ],
+          "issue_count": 10
+        },
+        "content_quality": {
+          "metric": "content_quality",
+          "score": 0.65,
+          "passed": false,
+          "issues": [
+            "Output length inadequate compared to input",
+            "Missing detailed solution recommendations",
+            "Roadmap lacks actionability"
+          ],
+          "issue_count": 3,
+          "output_length": 0,
+          "input_length": 519
+        },
+        "completeness": {
+          "metric": "completeness",
+          "score": 0.5,
+          "passed": false,
+          "issues": [
+            "No categories generated from input",
+            "No taxonomy generated from problems"
+          ],
+          "issue_count": 2,
+          "input_problem_count": 8,
+          "categories_generated": 0
+        }
+      },
+      "overall_score": 0.4166666666666667,
+      "all_passed": false
+    }
+  ]
+}

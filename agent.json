@@ -1,0 +1,257 @@
+{
+  "name": "orchestrator_agent",
+  "displayName": "Multi-Agent Orchestrator",
+  "version": "1.0.0",
+  "description": "Orquestra 7 agentes especializados (classifier → taxonomist → refiner → extractor/curator → index architect → auditor) para análise e categorização de problemas usando GitHub Models",
+  "language": "python",
+  "runtime": "python3.10+",
+  "entryPoint": "orchestrator_agent.py",
+  "author": "Orchestrator Team",
+  "license": "MIT",
+  
+  "configuration": {
+    "modelProvider": "github-models",
+    "baseUrl": "https://models.inference.ai.azure.com",
+    "model": "gpt-4o",
+    "temperature": 0.1,
+    "authRequired": true,
+    "authMethod": "github-token"
+  },
+
+  "dependencies": {
+    "openai": ">=1.47.0",
+    "python-dotenv": ">=1.0.0"
+  },
+
+  "executors": [
+    {
+      "name": "problem_classifier",
+      "description": "Classifica problemas brutos em categorias iniciais",
+      "prompt": "prompts/problem_classifier_agent.md",
+      "type": "sequential"
+    },
+    {
+      "name": "raw_taxonomist",
+      "description": "Organiza problemas em taxonomia bruta por tema",
+      "prompt": "prompts/raw_taxonomist_agent.md",
+      "type": "sequential"
+    },
+    {
+      "name": "taxonomy_refiner",
+      "description": "Refina e otimiza a taxonomia para execução",
+      "prompt": "prompts/taxonomy_refiner_agent.md",
+      "type": "sequential"
+    },
+    {
+      "name": "category_extractor",
+      "description": "Extrai problemas detalhados por categoria com soluções",
+      "prompt": "prompts/category_extractor_agent.md",
+      "type": "parallel"
+    },
+    {
+      "name": "category_curator",
+      "description": "Cura roadmaps de execução por categoria",
+      "prompt": "prompts/category_curator_agent.md",
+      "type": "parallel"
+    },
+    {
+      "name": "index_architect",
+      "description": "Cria roadmap master com coordenação cross-categoria",
+      "prompt": "prompts/index_architect_agent.md",
+      "type": "sequential"
+    },
+    {
+      "name": "structure_auditor",
+      "description": "Audita integridade estrutural e completude",
+      "prompt": "prompts/structure_auditor_agent.md",
+      "type": "sequential"
+    }
+  ],
+
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "rawNotes": {
+        "type": "string",
+        "description": "Notas/problemas brutos em formato livre (markdown ou texto)"
+      },
+      "inputFile": {
+        "type": "string",
+        "description": "Caminho para ficheiro markdown com problemas (alternativa a rawNotes)"
+      }
+    },
+    "required": ["rawNotes"]
+  },
+
+  "outputSchema": {
+    "type": "object",
+    "properties": {
+      "classifier": {
+        "type": "string",
+        "description": "Classificação inicial dos problemas"
+      },
+      "taxonomy_raw": {
+        "type": "string",
+        "description": "Taxonomia bruta organizada por tema"
+      },
+      "taxonomy_refined": {
+        "type": "string",
+        "description": "Taxonomia otimizada para execução"
+      },
+      "categories": {
+        "type": "array",
+        "description": "Categorias extraídas e curadas com roadmaps",
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": { "type": "string" },
+            "name": { "type": "string" },
+            "problems": { "type": "integer" },
+            "effort": { "type": "string" },
+            "owner": { "type": "string" },
+            "roadmap": { "type": "string" }
+          }
+        }
+      },
+      "masterRoadmap": {
+        "type": "string",
+        "description": "Roadmap master de execução cross-categoria"
+      },
+      "auditReport": {
+        "type": "string",
+        "description": "Relatório de auditoria estrutural"
+      }
+    }
+  },
+
+  "pipeline": {
+    "steps": [
+      {
+        "id": 1,
+        "executor": "problem_classifier",
+        "input": "rawNotes",
+        "output": "classifier"
+      },
+      {
+        "id": 2,
+        "executor": "raw_taxonomist",
+        "input": "classifier",
+        "output": "taxonomy_raw"
+      },
+      {
+        "id": 3,
+        "executor": "taxonomy_refiner",
+        "input": "taxonomy_raw",
+        "output": "taxonomy_refined"
+      },
+      {
+        "id": 4,
+        "executor": "category_extractor",
+        "input": "taxonomy_refined",
+        "output": "categories[].extraction",
+        "parallelization": "per-category"
+      },
+      {
+        "id": 5,
+        "executor": "category_curator",
+        "input": "categories[].extraction",
+        "output": "categories[].roadmap",
+        "parallelization": "per-category"
+      },
+      {
+        "id": 6,
+        "executor": "index_architect",
+        "input": "categories[].roadmap",
+        "output": "masterRoadmap"
+      },
+      {
+        "id": 7,
+        "executor": "structure_auditor",
+        "input": ["rawNotes", "masterRoadmap"],
+        "output": "auditReport"
+      }
+    ]
+  },
+
+  "features": [
+    "Classificação automática de problemas",
+    "Taxonomia dinâmica e refinada",
+    "Extração paralela por categoria",
+    "Curation de roadmaps detalhados",
+    "Roadmap master com análise crítica",
+    "Auditoria estrutural e validação",
+    "Saída em Markdown para fácil integração"
+  ],
+
+  "outputs": {
+    "directory": "outputs",
+    "files": [
+      {
+        "name": "pipeline_summary.md",
+        "description": "Sumário completo de toda a pipeline"
+      },
+      {
+        "name": "classifier_output.md",
+        "description": "Saída do classificador (se salvo)"
+      },
+      {
+        "name": "roadmap_master.md",
+        "description": "Roadmap master final"
+      }
+    ]
+  },
+
+  "environmentVariables": {
+    "GITHUB_TOKEN": {
+      "description": "GitHub Personal Access Token (classic) para acesso ao GitHub Models",
+      "required": true
+    },
+    "BASE_URL": {
+      "description": "URL base do GitHub Models",
+      "default": "https://models.inference.ai.azure.com",
+      "required": false
+    },
+    "MODEL_ID": {
+      "description": "ID do modelo a usar (gpt-4o, gpt-4.1, etc)",
+      "default": "gpt-4o",
+      "required": false
+    }
+  },
+
+  "commands": {
+    "run": "python orchestrator_agent.py",
+    "test": "python -m pytest tests/ -v",
+    "install": "pip install -r requirements.txt"
+  },
+
+  "files": {
+    "config": "workflow_config.py",
+    "executors": "executors.py",
+    "prompts_dir": "prompts/",
+    "samples": "samples/",
+    "outputs": "outputs/"
+  },
+
+  "capabilities": {
+    "parallelExecution": true,
+    "asyncSupport": true,
+    "streaming": false,
+    "multipleInputs": true,
+    "multipleOutputs": true,
+    "errorHandling": "graceful"
+  },
+
+  "tags": [
+    "problem-analysis",
+    "categorization",
+    "roadmap-generation",
+    "multi-agent",
+    "orchestration",
+    "github-models"
+  ],
+
+  "requiredTools": [],
+
+  "status": "production",
+  "lastUpdated": "2026-01-15"
+}
