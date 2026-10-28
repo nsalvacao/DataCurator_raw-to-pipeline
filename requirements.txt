@@ -2,7 +2,7 @@ openai>=1.47.0
 python-dotenv>=1.0.0
 
 # Tracing & Observability
-opentelemetry-api==1.34.1
+opentelemetry-api==1.45.1
 opentelemetry-sdk==1.34.1
 opentelemetry-exporter-otlp-proto-http==1.34.1
 opentelemetry-instrumentation-openai-v2==2.1b0
